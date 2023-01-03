@@ -1,0 +1,45 @@
+{
+    "name": "yii-tools/html",
+    "type": "library",
+    "description": "Code generator HTML for PHP.",
+    "keywords": [
+        "yii-tools",
+        "html",
+        "php",
+        "yii3"
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "maglnet/composer-require-checker": "^4.3",
+        "phpunit/phpunit": "^9.5",
+        "roave/infection-static-analysis-plugin": "^1.28",
+        "vimeo/psalm": "^5.4",
+        "yii-tools/support": "^1.0@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yii\\Html\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yii\\Html\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    }
+}
