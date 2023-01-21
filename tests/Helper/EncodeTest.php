@@ -27,4 +27,9 @@ final class EncodeTest extends TestCase
     {
         $this->assertSame($expected, Encode::content($value));
     }
+
+    public function testEncodeDouble(): void
+    {
+        $this->assertSame('sam &amp;amp; dark', Encode::content('sam &amp; dark'));
+    }
 }

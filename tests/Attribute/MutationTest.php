@@ -66,13 +66,13 @@ final class MutationTest extends TestCase
     private function widget(): object
     {
         return new class () {
-            use Attribute\Autofocus;
-            use Attribute\Classes;
-            use Attribute\Disabled;
-            use Attribute\Formnovalidate;
-            use Attribute\Multiple;
-            use Attribute\Readonlys;
-            use Attribute\Required;
+            use Attribute\CanBeAutofocus;
+            use Attribute\CanBeDisabled;
+            use Attribute\CanBeFormnovalidate;
+            use Attribute\CanBeMultiple;
+            use Attribute\CanBeReadonly;
+            use Attribute\CanBeRequired;
+            use Attribute\HasClass;
 
             protected array $attributes = [];
 

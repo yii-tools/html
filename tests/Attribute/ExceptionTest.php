@@ -71,15 +71,15 @@ final class ExceptionTest extends TestCase
     private function widget(): object
     {
         return new class () {
-            use Attribute\Autocomplete;
-            use Attribute\Dirname;
-            use Attribute\Disabled;
-            use Attribute\Formaction;
-            use Attribute\Formenctype;
-            use Attribute\Formmethod;
-            use Attribute\Formtarget;
-            use Attribute\Lists;
-            use Attribute\Step;
+            use Attribute\CanBeDisabled;
+            use Attribute\HasAutocomplete;
+            use Attribute\HasDirname;
+            use Attribute\HasFormaction;
+            use Attribute\HasFormenctype;
+            use Attribute\HasFormmethod;
+            use Attribute\HasFormtarget;
+            use Attribute\HasLists;
+            use Attribute\HasStep;
 
             protected array $attributes = [];
         };
