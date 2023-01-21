@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait MaxLength
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the maxlength attribute defines the maximum number of characters
      * (as UTF-16 code units) the user can enter into a tag input.

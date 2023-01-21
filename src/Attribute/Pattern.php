@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Pattern
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the pattern attribute, when specified, is a regular expression that the input's
      * value must match in order for the value to pass constraint validation. It must be a valid JavaScript regular

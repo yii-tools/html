@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait AriaLabel
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with a string value that labels an interactive element.
      *

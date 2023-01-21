@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Dirname
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with enables submission of a value for the directionality of the element, and gives the
      * name of the field that contains that value.

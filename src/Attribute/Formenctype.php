@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Formenctype
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifies a mime type with which a UA is meant to associate this element for form
      * submission.

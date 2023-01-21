@@ -10,6 +10,8 @@ namespace Yii\Html\Attribute;
  */
 trait MinLength
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the minimum number of characters (as UTF-16 code units) the user can enter into the
      * text input.

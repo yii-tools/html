@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Name
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the name part of the name/value pair associated with this element for
      * the purposes of form submission.

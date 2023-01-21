@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Autocomplete
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance specifies whether the element represents an input control for which a UA is meant to store
      * the value entered by the user (so that the UA can prefill the form later).

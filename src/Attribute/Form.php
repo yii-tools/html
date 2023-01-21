@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Form
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with specifies the form element the tag input element belongs to.
      *

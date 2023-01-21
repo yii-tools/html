@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Size
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the number of options meant to be shown by the control represented by its element.
      *

@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Step
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifying the value granularity of the element’s value.
      *

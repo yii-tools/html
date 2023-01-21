@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Readonlys
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with a boolean attribute which, if present, means this field cannot be edited by the user.
      *

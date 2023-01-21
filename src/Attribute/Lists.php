@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Lists
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the value of the id attribute on the datalist with which to associate the element.
      *

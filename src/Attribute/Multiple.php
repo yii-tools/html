@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Multiple
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifying the element allows multiple values.
      *

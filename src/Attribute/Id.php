@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Id
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the ID of the widget.
      *

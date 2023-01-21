@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Title
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the title global attribute contains text representing advisory
      * information related to the element it belongs to.

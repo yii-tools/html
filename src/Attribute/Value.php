@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Value
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the value content attribute gives the default value of the field.
      *

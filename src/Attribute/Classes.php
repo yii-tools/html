@@ -11,6 +11,8 @@ use Yii\Html\Helper\CssClass;
  */
 trait Classes
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified class added.
      *

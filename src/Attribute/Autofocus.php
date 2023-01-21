@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Autofocus
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the focus on the control (put cursor into it) when the page loads.
      * Only one form element could be in focus at the same time.

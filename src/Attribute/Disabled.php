@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Disabled
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the disabled state.
      *

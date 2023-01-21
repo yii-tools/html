@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Tabindex
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified the tabindex global attribute indicates that its element can be
      * focused, and where it participates in sequential keyboard navigation (usually with the Tab key, hence the name).

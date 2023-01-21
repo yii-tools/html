@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait AriaDescribedBy
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with identifies the element (or elements) that describes the element on which the
      * attribute is set.

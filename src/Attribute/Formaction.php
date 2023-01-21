@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Formaction
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifies the form-submission action for the element.
      *

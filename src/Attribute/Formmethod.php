@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Formmethod
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifies the HTTP method with which a UA is meant to associate this element for form
      * submission.

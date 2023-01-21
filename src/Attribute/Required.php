@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Required
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with if it is required to fill in a value in order to submit the form.
      *

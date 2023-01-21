@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Type
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the specified that its input element is a button with no additional semantics.
      *

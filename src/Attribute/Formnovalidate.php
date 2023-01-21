@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Formnovalidate
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifies that the element represents a control whose value is not meant to be validated
      * during form submission.

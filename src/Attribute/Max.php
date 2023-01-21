@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Max
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the maximum value.
      *

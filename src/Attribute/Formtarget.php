@@ -11,6 +11,8 @@ use InvalidArgumentException;
  */
 trait Formtarget
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifies a browsing context name or keyword that represents the target of the control.
      *

@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Min
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the minimum value.
      *

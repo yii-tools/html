@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Accept
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instance with the accept attribute value is a string that defines the file types the file input
      * should accept. This string is a comma-separated list of unique file type specifiers. Because a given file type

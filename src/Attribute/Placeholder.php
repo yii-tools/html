@@ -9,6 +9,8 @@ namespace Yii\Html\Attribute;
  */
 trait Placeholder
 {
+    protected array $attributes = [];
+
     /**
      * Returns a new instances specifying the placeholder attribute.
      *
