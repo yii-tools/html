@@ -11,6 +11,9 @@ use function is_array;
 use function is_int;
 use function preg_split;
 
+/**
+ * CssClass provides a set of static methods for managing CSS classes.
+ */
 final class CssClass
 {
     /**

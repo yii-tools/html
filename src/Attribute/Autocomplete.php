@@ -6,13 +6,16 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Autocomplete trait is used by elements that have an autocomplete attribute.
+ */
 trait Autocomplete
 {
     /**
      * Returns a new instance specifies whether the element represents an input control for which a UA is meant to store
      * the value entered by the user (so that the UA can prefill the form later).
      *
-     * @param bool $autocomplete Whether the element represents an input control for which a UA is meant to store
+     * @param string $value Whether the element represents an input control for which a UA is meant to store
      * the value entered by the user (so that the UA can prefill the form later).
      *
      * @link https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-autocomplete

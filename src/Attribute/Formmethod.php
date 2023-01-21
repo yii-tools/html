@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Formmethod trait is used by elements that have a formmethod attribute.
+ */
 trait Formmethod
 {
     /**

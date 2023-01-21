@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Pattern trait is used to set the pattern attribute value for an element.
+ */
 trait Pattern
 {
     /**

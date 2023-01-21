@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Min trait for the min attribute of the input tag.
+ */
 trait Min
 {
     /**

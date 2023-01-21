@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Multiple trait is used to set the multiple attribute value of the input element.
+ */
 trait Multiple
 {
     /**

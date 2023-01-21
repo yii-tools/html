@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Dirname trait is used to set the name of the field that contains the directionality of the element.
+ */
 trait Dirname
 {
     /**

@@ -7,13 +7,18 @@ namespace Yii\Html\Helper;
 use InvalidArgumentException;
 use UnexpectedValueException;
 
+use function mb_strtolower;
 use function preg_match;
 use function preg_replace;
+use function str_replace;
 use function strlen;
 use function strrchr;
 use function strrpos;
 use function substr;
 
+/**
+ * Utils provides a set of static methods for common tasks.
+ */
 final class Utils
 {
     /**
@@ -23,7 +28,7 @@ final class Utils
      */
     public static function generateArrayableName(string $name): string
     {
-        return substr($name, -2) !== '[]' ? $name . '[]' : $name;
+        return !str_ends_with($name, '[]') ? $name . '[]' : $name;
     }
 
     /**
@@ -108,7 +113,7 @@ final class Utils
         $pattern = preg_replace('/\\\\x{?([0-9a-fA-F]+)}?/', '\u$1', $regexp);
 
         if ($delimiter === null) {
-            $delimiter = substr($pattern, 0, 1);
+            $delimiter = $pattern[0];
         }
 
         if (strlen($delimiter) !== 1) {

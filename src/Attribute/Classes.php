@@ -6,12 +6,15 @@ namespace Yii\Html\Attribute;
 
 use Yii\Html\Helper\CssClass;
 
+/**
+ * Classes traits is used to add the class attribute to an element.
+ */
 trait Classes
 {
     /**
-     * Returns a new instance with the specified the widget class.
+     * Returns a new instance with the specified class added.
      *
-     * @param string $class The widget class.
+     * @param string $value The class value to add.
      *
      * @link https://html.spec.whatwg.org/#classes
      */

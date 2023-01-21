@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Step trait is used by elements that have a step attribute.
+ */
 trait Step
 {
     /**

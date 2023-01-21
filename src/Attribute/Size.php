@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Size trait is used by elements that have a size attribute.
+ */
 trait Size
 {
     /**

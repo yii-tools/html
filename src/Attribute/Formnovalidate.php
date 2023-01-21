@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Formnovalidate trait is used by elements that have a formnovalidate attribute.
+ */
 trait Formnovalidate
 {
     /**

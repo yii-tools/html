@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Required trait is used by elements that can have a required attribute specifying that the element is required.
+ */
 trait Required
 {
     /**

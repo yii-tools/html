@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Value trait is used by elements that have a value attribute.
+ */
 trait Value
 {
     /**

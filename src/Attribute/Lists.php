@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * List trait is used to set the value of the id attribute on the datalist with which to associate the element.
+ */
 trait Lists
 {
     /**

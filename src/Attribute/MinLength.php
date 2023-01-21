@@ -4,6 +4,10 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * MinLength trait is used to set the minimum number of characters (as UTF-16 code units) the user can enter into the
+ * text input.
+ */
 trait MinLength
 {
     /**

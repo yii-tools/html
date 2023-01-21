@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Autofocus trait is used by elements that have an autofocus attribute.
+ */
 trait Autofocus
 {
     /**

@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Formtarget trait is used to set the formtarget attribute value.
+ */
 trait Formtarget
 {
     /**

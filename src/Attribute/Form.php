@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Form trait is used by elements that can be associated with a form element.
+ */
 trait Form
 {
     /**

@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Formaction trait is used by elements that have a formaction attribute.
+ */
 trait Formaction
 {
     /**

@@ -7,6 +7,9 @@ namespace Yii\Html\Helper;
 use function htmlspecialchars;
 use function strtr;
 
+/**
+ * Encode provides methods for encoding HTML special characters.
+ */
 final class Encode
 {
     private const HTMLSPECIALCHARS_FLAGS = ENT_QUOTES | ENT_HTML5 | ENT_SUBSTITUTE;

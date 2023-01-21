@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Checked trait is used by elements that support the checked attribute.
+ */
 trait Checked
 {
     private bool $checked = false;

@@ -6,6 +6,9 @@ namespace Yii\Html\Attribute;
 
 use InvalidArgumentException;
 
+/**
+ * Formenctype trait is used by elements that have a formenctype attribute.
+ */
 trait Formenctype
 {
     /**

@@ -148,7 +148,7 @@ final class Tag
     {
         $tag = self::validateTag($tag);
 
-        return '</' . $tag . '>';
+        return "</$tag>";
     }
 
     /**

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Disabled trait is used to set the disabled attribute of an element.
+ */
 trait Disabled
 {
     /**

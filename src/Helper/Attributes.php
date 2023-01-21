@@ -15,6 +15,9 @@ use function is_array;
 use function json_encode;
 use function rtrim;
 
+/**
+ * Attributes is a helper class that provides a set of helper methods for managing HTML tag attributes.
+ */
 final class Attributes
 {
     private const JSON_FLAGS = JSON_UNESCAPED_UNICODE | JSON_HEX_QUOT | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS |
@@ -104,7 +107,7 @@ final class Attributes
             $sorted = [];
             foreach ($this->order as $name) {
                 if (isset($attributes[$name])) {
-                    /** @var string[] */
+                    /** @psalm-var string[] */
                     $sorted[$name] = $attributes[$name];
                 }
             }

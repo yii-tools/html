@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Tabindex trait is used to set tabindex attribute value for an element.
+ */
 trait Tabindex
 {
     /**

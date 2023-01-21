@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * MaxLength trait is used to set the maxlength attribute of an element.
+ */
 trait MaxLength
 {
     /**

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Id trait is used to set the id attribute value of an element.
+ */
 trait Id
 {
     /**
@@ -13,7 +16,7 @@ trait Id
      *
      * @link https://html.spec.whatwg.org/multipage/dom.html#the-id-attribute
      */
-    public function id(?string $id): static
+    public function id(string|null $id): static
     {
         $new = clone $this;
         $new->attributes['id'] = $id;

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Yii\Html\Attribute;
 
+/**
+ * Readonlys is a trait that sets the readonly attribute value for an element.
+ */
 trait Readonlys
 {
     /**
