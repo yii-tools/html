@@ -72,6 +72,12 @@ final class UtilsTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage($message);
+
         Utils::normalizeRegexpPattern($regexp, $delimiter);
+    }
+
+    public function testShortNameClass(): void
+    {
+        $this->assertSame('UtilsTest::class', Utils::shortNameClass(self::class));
     }
 }

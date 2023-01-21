@@ -6,6 +6,11 @@ namespace Yii\Html\Helper;
 
 use InvalidArgumentException;
 
+use function preg_match;
+use function preg_replace;
+use function strlen;
+use function strrchr;
+use function strrpos;
 use function substr;
 
 final class Utils
@@ -90,6 +95,16 @@ final class Utils
         }
 
         return substr($pattern, 1, $endPosition - 1);
+    }
+
+    /**
+     * Returns the short name of the given class.
+     *
+     * @param string $class The class name.
+     */
+    public static function shortNameClass(string $class): string
+    {
+        return substr(strrchr($class, '\\'), 1) . '::class';
     }
 
     /**

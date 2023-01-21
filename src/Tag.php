@@ -129,12 +129,12 @@ final class Tag
         }
 
         if (self::inlinedElements($tag)) {
-            return $voidElement . $content . '</' . $tag . '>';
+            return "$voidElement$content</$tag>";
         }
 
         $content = $content === '' ? '' : $content . PHP_EOL;
 
-        return $voidElement . PHP_EOL . $content . '</' . $tag . '>';
+        return "$voidElement\n$content</$tag>";
     }
 
     /**
