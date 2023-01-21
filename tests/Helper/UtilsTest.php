@@ -4,15 +4,56 @@ declare(strict_types=1);
 
 namespace Yii\Html\Tests\Helper;
 
-use Yii\Html\Helper\Utils;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use Yii\Html\Helper\Utils;
 
 final class UtilsTest extends TestCase
 {
+    public function dataGetInputName(): array
+    {
+        return [
+            ['TestForm', '[0]content', 'TestForm[0][content]'],
+            ['TestForm', 'dates[0]', 'TestForm[dates][0]'],
+            ['TestForm', '[0]dates[0]', 'TestForm[0][dates][0]'],
+            ['TestForm', 'age', 'TestForm[age]'],
+            ['', 'dates[0]', 'dates[0]'],
+            ['', 'age', 'age'],
+        ];
+    }
+
     public function testGenerateArrayableName(): void
     {
         $this->assertSame('test.name[]', Utils::generateArrayableName('test.name'));
+    }
+
+    public function testGenerateInputId(): void
+    {
+        $this->assertSame('utilstest-string', Utils::generateInputId('UtilsTest', 'string'));
+    }
+
+    /**
+     * @dataProvider dataGetInputName
+     */
+    public function testGetInputName(string $formName, string $attribute, string $expected): void
+    {
+        $this->assertSame($expected, Utils::generateInputName($formName, $attribute));
+    }
+
+    public function testGetInputNamewithOnlyCharacters(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Attribute name must contain word characters only.');
+
+        Utils::generateInputName('TestForm', 'content body');
+    }
+
+    public function testGetInputNameExceptionWithTabular(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('The form name cannot be empty for tabular inputs.');
+
+        Utils::generateInputName('', '[0]dates[0]');
     }
 
     public function testMultibyteGenerateArrayableName(): void
@@ -21,6 +62,11 @@ final class UtilsTest extends TestCase
         $this->assertSame('登录[]', Utils::generateArrayableName('登录[]'));
         $this->assertSame('登录[0][]', Utils::generateArrayableName('登录[0]'));
         $this->assertSame('[0]登录[0][]', Utils::generateArrayableName('[0]登录[0]'));
+    }
+
+    public function testMultibyteGenerateInputId(): void
+    {
+        $this->assertSame('testform-mąka', Utils::generateInputId('TestForm', 'mĄkA'));
     }
 
     public function normalizeRegexpPatternProvider(): array

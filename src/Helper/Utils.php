@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Yii\Html\Helper;
 
 use InvalidArgumentException;
+use UnexpectedValueException;
 
 use function preg_match;
 use function preg_replace;
@@ -26,6 +27,32 @@ final class Utils
     }
 
     /**
+     * Generates an appropriate input ID for the specified attribute name or expression.
+     *
+     * This method converts the result {@see generateInputName()} into a valid input ID.
+     *
+     * For example, if {@see generateInputName()} returns `Post[content]`, this method will return `post-content`.
+     *
+     * @param string $formName The form name.
+     * @param string $attribute The attribute name or expression.
+     * @param string $charset default `UTF-8`.
+     *
+     * @throws InvalidArgumentException If the attribute name contains non-word characters.
+     * @throws UnexpectedValueException If charset is unknown
+     *
+     * @return string the generated input ID.
+     */
+    public static function generateInputId(
+        string $formName = '',
+        string $attribute = '',
+        string $charset = 'UTF-8'
+    ): string {
+        $name = mb_strtolower(self::generateInputName($formName, $attribute), $charset);
+
+        return str_replace(['[]', '][', '[', ']', ' ', '.'], ['', '-', '-', '', '-', '-'], $name);
+    }
+
+    /**
      * Generates an appropriate input name for the specified attribute name or expression.
      *
      * This method generates a name that can be used as the input name to collect user input for the specified
@@ -39,7 +66,7 @@ final class Utils
      * @throws InvalidArgumentException If the attribute name contains non-word characters or empty form name for
      * tabular inputs
      */
-    public static function getInputName(string $formName, string $attribute): string
+    public static function generateInputName(string $formName, string $attribute): string
     {
         $data = self::parseAttribute($attribute);
 
