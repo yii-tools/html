@@ -1,11 +1,11 @@
 {
     "name": "yii-tools/html",
     "type": "library",
-    "description": "Code generator HTML for PHP.",
+    "description": "Awesome HTML for YiiFramework v.3.0.",
     "keywords": [
         "yii-tools",
+        "awesome",
         "html",
-        "php",
         "yii3"
     ],
     "license": "MIT",
